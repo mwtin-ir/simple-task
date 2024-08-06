@@ -19,11 +19,11 @@ function App() {
       console.log(JSON.stringify(newUser));
     }
 
-    setInterval(() => {
+    setTimeout(() => {
       setClicked(false);
       setPasswordilInput("");
       setEmailInput("");
-    }, 1000);
+    }, 500);
   }
   return (
     <div className="container">
