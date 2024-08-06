@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import ErrorInput from "./Error";
+import ErrorInput from "./components/Error";
 
 function App() {
   const [emailInput, setEmailInput] = useState("");
