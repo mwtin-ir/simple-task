@@ -38,7 +38,7 @@ function App() {
             onChange={(e) => setEmailInput(e.target.value)}
           />
 
-          {emailInput?.length < 6 && clicked && <ErrorInput text=" " />}
+          {emailInput?.length < 6 && clicked && <ErrorInput text="ایمیل " />}
         </div>
         <div className="Box">
           <input
