@@ -17,13 +17,13 @@ function App() {
         password: passwordInput,
       };
       console.log(JSON.stringify(newUser));
-    }
 
-    setTimeout(() => {
-      setClicked(false);
-      setPasswordilInput("");
-      setEmailInput("");
-    }, 500);
+      setTimeout(() => {
+        setPasswordilInput("");
+        setEmailInput("");
+        setClicked(false);
+      }, 50);
+    }
   }
   return (
     <div className="container">
@@ -38,7 +38,7 @@ function App() {
             onChange={(e) => setEmailInput(e.target.value)}
           />
 
-          {emailInput?.length < 6 && clicked && <ErrorInput text="ایمیل " />}
+          {emailInput?.length < 6 && clicked && <ErrorInput text=" " />}
         </div>
         <div className="Box">
           <input
