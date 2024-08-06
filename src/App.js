@@ -17,9 +17,13 @@ function App() {
         password: passwordInput,
       };
       console.log(JSON.stringify(newUser));
+    }
+
+    setInterval(() => {
+      setClicked(false);
       setPasswordilInput("");
       setEmailInput("");
-    }
+    }, 1000);
   }
   return (
     <div className="container">
@@ -34,7 +38,7 @@ function App() {
             onChange={(e) => setEmailInput(e.target.value)}
           />
 
-          {emailInput?.length > 6 && clicked && <ErrorInput text="ایمیل " />}
+          {emailInput?.length < 6 && clicked && <ErrorInput text="ایمیل " />}
         </div>
         <div className="Box">
           <input
@@ -51,7 +55,7 @@ function App() {
             {!showPassword ? "👁️" : "🫣"}
           </span>
 
-          {passwordInput?.length > 8 && clicked && (
+          {passwordInput?.length < 8 && clicked && (
             <ErrorInput text="رمز عبور " />
           )}
         </div>

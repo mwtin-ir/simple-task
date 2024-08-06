@@ -28,6 +28,7 @@
   background-color: white;
 }
 .input[value] {
+  font-family: "IRANSansX";
 }
 .input:focus {
   outline-color: rgb(37 99 235);
